@@ -175,6 +175,12 @@ stack.done((stack)=>{
 });
 stack.run();
 
+// call results
+//------------------------------------------------------------------------------
+//first done
+//hello world this is second result
+//[ null, [ 'this is second result' ], [ 'this is third result' ] ]
+
 ```
 
 ## Error
