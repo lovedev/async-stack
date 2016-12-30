@@ -1,5 +1,11 @@
 # AsyncStack.js
 
+AsyncStack is a project that focuses on defining and using functions like async / awit. A common use of async.js is to save a lot of callbacks, but it uses a lot of anonymous functions in its use and has the disadvantage of limited use of parameters to pass to each function. So, in the scope of the function that surrounds async, there are a lot of patterns that put variables or objects in function scopes and use them as global variables.
+
+AsyncStack improves code reusability by minimizing the use of anonymous functions and maximizes the convenience of passing parameter values freely between asynchronous functions using template parameters.
+
+In addition, AsyncStack has more efficient memory management than async.js.
+
 AsyncStack은 async/awit와 비슷한 형태로 함수를 정의하고 사용할 수 있도록 하는데 중점을 둔 프로젝트입니다.
 흔히 사용되는 async.js의 경우, 콜백을 많이 줄여주기는 하지만 사용함에 있어서 익명함수를 많이 사용하게 되며
 각 함수에 전달할 매개변수의 사용의 설정이 제한적인 단점이 있습니다. 그래서 async를 감싸는 함수의 스코프 내에서
