@@ -19,7 +19,7 @@ AsyncStack은 익명함수를 최대한 적게 사용할 수 있도록 해 코�
 
 ## Installation
 
-Since you probably already have `node`, the easiest way to install `n` is through `npm`:
+Since you probably already have `node`, the easiest way to install `asyncstack` is through `npm`:
 
     $ npm install asyncstack --save
 
