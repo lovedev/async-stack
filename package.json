@@ -1,0 +1,32 @@
+{
+  "name": "async-stack",
+  "version": "0.1.0",
+  "description": "Asynchronous call stack library like async/await pattern",
+  "author": { "name": "lovedev", "email": "lovedev@naver.com", "url": "http://lovedev.tistory.com/" },
+  "contributors": [
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/lovedev/async-stack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lovedev/async-stack/issues"
+  },
+  "main": "lib/async-stack.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {},
+  "files": {
+    "main": "lib/async-stack.js",
+    "include": [
+      "lib/async-stack.js",
+      "README.md",
+      "LICENSE"
+    ]
+  },
+  "readme": "ERROR: No README data found!",
+  "engines" : { "node" : ">= 6.7.0" },
+  "homepage": "https://github.com/lovedev/async-stack",
+  "license": "MIT",
+  "keywords": ["async-stack", "AsyncStack", "async", "await", "stack", "parallel", "concurrent"]
+}
