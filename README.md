@@ -20,7 +20,7 @@ stack.await(asyncfunction1, args1, args2).await(asyncfunction2).run();
 
 ```
 
-## Example (Basic)
+## Basic
 
 ```javascript
 function first(stack, msg){
@@ -63,7 +63,7 @@ stack.run();
 ```
 
 
-## Example (Advanced)
+## Advanced
 
 ```javascript
 function stackInStack(stack){
@@ -117,7 +117,7 @@ stack.run();
 //   [ 'call', 'complete', 'function' ] ]
 ```
 
-##Example (Template Argument)
+##Template Arguments
 ```javascript
 function first(stack, msg){
     setTimeout(function(){
@@ -152,7 +152,7 @@ stack.run();
 
 ```
 
-## Example (Error)
+## Error
 ```javascript
 function stackInStack(stack){
     console.log('stack in stack');
