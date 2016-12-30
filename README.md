@@ -6,6 +6,7 @@ AsyncStack improves code reusability by minimizing the use of anonymous function
 
 In addition, AsyncStack has more efficient memory management than async.js.
 
+***
 AsyncStack은 async/awit와 비슷한 형태로 함수를 정의하고 사용할 수 있도록 하는데 중점을 둔 프로젝트입니다.
 흔히 사용되는 async.js의 경우, 콜백을 많이 줄여주기는 하지만 사용함에 있어서 익명함수를 많이 사용하게 되며
 각 함수에 전달할 매개변수의 사용의 설정이 제한적인 단점이 있습니다. 그래서 async를 감싸는 함수의 스코프 내에서
