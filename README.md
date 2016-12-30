@@ -17,6 +17,10 @@ AsyncStack은 익명함수를 최대한 적게 사용할 수 있도록 해 코�
 
 이외에 AsyncStack은 async.js보다 메모리 관리를 효율적으로 하고 있습니다.
 
+## Install
+npm install asyncstack --save
+
+
 ## Quick Examples
 
 ```javascript
