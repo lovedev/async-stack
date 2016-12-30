@@ -1,6 +1,6 @@
 {
-  "name": "AsyncStack",
-  "version": "0.1.0",
+  "name": "asyncstack",
+  "version": "0.1.1",
   "description": "Asynchronous call stack library like async/await pattern",
   "author": { "name": "lovedev", "email": "lovedev@naver.com", "url": "http://lovedev.tistory.com/" },
   "contributors": [
@@ -24,7 +24,6 @@
       "LICENSE"
     ]
   },
-  "readme": "ERROR: No README data found!",
   "engines" : { "node" : ">= 6.7.0" },
   "homepage": "https://github.com/lovedev/async-stack",
   "license": "MIT",

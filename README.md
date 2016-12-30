@@ -14,6 +14,8 @@ AsyncStack은 익명함수를 최대한 적게 사용할 수 있도록 해 코�
 
 ```javascript
 
+let AsyncStack = require('asyncstack');
+
 //asyncfunction must have stack argument at first
 function asyncfunction1(stack, args1, args2){
   //call stack.done when stack finish and define result for next asyncfunction
