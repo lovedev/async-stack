@@ -25,7 +25,7 @@ Since you probably already have `node`, the easiest way to install `asyncstack` 
  
  
 
-##Usage async/await
+##How to use async / await and AsyncStack
  ```javascript
  
 async function asyncfunction1(){
@@ -44,7 +44,6 @@ async function run(){
 run();  
  ```
   
-##Usage comparison of AsyncStack
 ```javascript
 let AsyncStack = require('asyncstack');
 
