@@ -31,9 +31,14 @@ function third(stack, secondResult){
 }
 
 let stack = new AsyncStack();
+let hasError = true;
 stack.await(first, 'hello');
 stack.await(stackInStack);
-stack.stop('all stack stop!!');
+
+if(hasError === true){
+    stack.stop('all stack stop!!');
+}
+
 stack.done((stack)=>{
    console.log(stack.result());
 });

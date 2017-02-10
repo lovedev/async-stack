@@ -41,10 +41,11 @@ stack.fail((error, stack)=>{
 });
 stack.run();
 
-// call results
-//------------------------------------------------------------------------------
-// first done
-// stack in stack
-// hello world
-// second done
-// error!!!! all stack stop
+/*call results
+------------------------------------------------------------------------------
+first done
+stack in stack
+hello world
+second done
+error!!!! all stack stop
+*/

@@ -122,43 +122,41 @@ AsyncStack의 await와 pass를 통해 호출되는 함수는, 첫번째 인자�
 ## Basic
 
 ```javascript
-function first(stack, msg){
+function first(stack){
     setTimeout(function(){
-        console.log('first done');
-        stack.done(msg);
+        console.log(1);
+        stack.done(1);
     }, 2000);
 }
 
-function second(stack, firstResult) {
+function second(stack) {
     setTimeout(function(){
-        console.log(firstResult);
-        console.log('second done');
-        stack.done(firstResult);
+        console.log(2);
+        stack.done(2);
     }, 1000);
 }
 
-function third(stack, secondResult){
-    console.log(secondResult);
-    console.log('third done');
-    stack.done('call', 'complete', 'function');
+function third(stack){
+    console.log(3);
+    stack.done(3);
 }
 
 let stack = new AsyncStack();
-stack.await(first, 'hello').await(second).await(third);
+stack.await(first).await(second).await(third);
 stack.done((stack)=>{
    console.log(stack.result());
 });
 stack.run();
 
-// call results
-//------------------------------------------------------------------------------
-// first done
-// hello
-// second done
-// hello
-// third done
-// [ [ 'hello' ], [ 'hello' ], [ 'call', 'complete', 'function' ] ]
-
+//
+/* 
+call results
+------------------------------------------------------------------------------
+1
+2
+3
+[ [ 1 ], [ 2 ], [ 3 ] ]
+*/
 ```
 
 

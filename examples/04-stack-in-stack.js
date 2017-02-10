@@ -38,15 +38,16 @@ stack.done((stack)=>{
 });
 stack.run();
 
-// call results
-//------------------------------------------------------------------------------
-// first done
-// stack in stack
-// hello world
-// second done
-// hello world
-// third done
-// [ null,
-//   null,
-//   [ 'hello world' ],
-//   [ 'call', 'complete', 'function' ] ]
+/* call results
+------------------------------------------------------------------------------
+first done
+stack in stack
+hello world
+second done
+hello world
+third done
+[ null,
+  null,
+  [ 'hello world' ],
+  [ 'call', 'complete', 'function' ] ]
+*/

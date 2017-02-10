@@ -1,25 +1,23 @@
 'use strict';
 let AsyncStack = require('../lib/async-stack');
 
-function first(stack, msg){
+function first(stack){
+    console.log(1);
     setTimeout(function(){
-        console.log('first done');
-        stack.done(msg);
+        stack.done(1);
     }, 2000);
 }
 
-function second(stack, firstResult) {
+function second(stack) {
     setTimeout(function(){
-        console.log(firstResult);
-        console.log('second done');
-        stack.done(firstResult);
+        console.log(2);
+        stack.done(2);
     }, 1000);
 }
 
-function third(stack, secondResult){
-    console.log(secondResult);
-    console.log('third done');
-    stack.done('call', 'complete', 'function');
+function third(stack){
+    console.log(3);
+    stack.done(3);
 }
 
 let stack = new AsyncStack();
@@ -29,11 +27,10 @@ stack.done((stack)=>{
 });
 stack.run();
 
-// call results
-//------------------------------------------------------------------------------
-// first done
-// hello
-// second done
-// hello
-// third done
-// [ [ 'hello' ], [ 'hello' ], [ 'call', 'complete', 'function' ] ]
+/* call results
+------------------------------------------------------------------------------
+1
+2
+3
+[ [ 1 ], [ 2 ], [ 3 ] ]
+*/

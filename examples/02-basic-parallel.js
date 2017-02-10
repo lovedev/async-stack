@@ -4,34 +4,43 @@ let AsyncStack = require('../lib/async-stack');
 function first(stack, msg){
     setTimeout(function(){
         console.log(msg)
-        console.log('first done');
-        stack.done('first result');
+        console.log(1);
+        stack.done(1);
     }, 2000);
+    stack.pass(second);
 }
 
 function second(stack) {
     setTimeout(function(){
-        console.log('second done');
-        stack.done('second result');
+        console.log(2);
+        stack.done(2);
     }, 1000);
+    stack.await(fourth).pass(third);
 }
 
 function third(stack){
-    console.log('third done');
-    stack.done('third result');
+    console.log(3);
+    stack.done(3);
+}
+
+function fourth(stack){
+    console.log(4);
+    stack.done(4);
 }
 
 let stack = new AsyncStack();
-stack.pass(first, 'hello').pass(second).pass(third);
+stack.await(first, 'hello');
 stack.done((stack)=>{
-   console.log(stack.passResult());
+   console.log('complete');
 });
 stack.run();
 
-// call results
-//------------------------------------------------------------------------------
-// third done
-// second done
-// hello
-// first done
-// [ [ 'first result' ], [ 'second result' ], [ 'third result' ] ]
+/* call flow first > second > fourth > third
+------------------------------------------------------------------------------
+hello
+1
+2
+4
+3
+complete
+*/
