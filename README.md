@@ -214,6 +214,25 @@ stack.run();
 //   [ 'call', 'complete', 'function' ] ]
 ```
 
+```
+AsyncStack Flow Example (await와 pass의 실행흐름 예시)
+
+> new AsyncStack
+> await : A
+  - pass : F
+  - pass : G
+  - await : H
+  - pass : I
+
+> await : B
+> pass : C
+> pass : D
+> await : E
+```
+
+Run -> `A -> (F,G) -> H -> I -> B -> (C,D) -> E` -> Done 
+
+
 ##Template Arguments
 ```javascript
 function first(stack, msg){
