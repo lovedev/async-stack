@@ -279,7 +279,7 @@ stack.run();
 function stackInStack(stack){
     console.log('stack in stack');
     stack.await(second, ':firstResultValue');
-    stack.await(third);
+    stack.await(third);    
     stack.done();
 }
 
