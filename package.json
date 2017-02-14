@@ -1,6 +1,6 @@
 {
   "name": "asyncstack",
-  "version": "0.1.9",
+  "version": "0.1.91",
   "description": "Asynchronous call stack library like async/await pattern",
   "author": { "name": "lovedev", "email": "lovedev@naver.com", "url": "http://lovedev.tistory.com/" },
   "contributors": [

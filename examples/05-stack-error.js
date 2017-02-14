@@ -5,6 +5,9 @@ function stackInStack(stack){
     console.log('stack in stack');
     stack.await(second, ':firstResultValue');
     stack.await(third);
+    stack.fail((msg)=>{
+        console.log('error in stack', msg)
+    }, ':firstResultValue')
     stack.done();
 }
 
@@ -37,7 +40,7 @@ stack.done((stack)=>{
    console.log(stack.result());
 });
 stack.fail((error, stack)=>{
-   console.error(error);
+    console.log('main stack error is detected');
 });
 stack.run();
 
