@@ -1,4 +1,5 @@
 # AsyncStack.js
+Asyncstack maximizes efficiency so that the serial and parallel operations performed in the process can be executed in only one stack. You do not need to create a new stack for serial and parallel processing separately. However, asyncstack has a very simple structure.
 
 AsyncStack is a project that focuses on defining and using functions like async / await. A common use of async.js is to save a lot of callbacks, but it uses a lot of anonymous functions in its use and has the disadvantage of limited use of parameters to pass to each function. So, in the scope of the function that surrounds async, there are a lot of patterns that put variables or objects in function scopes and use them as global variables.
 
@@ -6,7 +7,12 @@ AsyncStack improves code reusability by minimizing the use of anonymous function
 
 In addition, AsyncStack has more efficient memory management than async.js.
 
+
+
 ***
+AsyncStack은 프로세스상에서 이뤄지는 직렬과 병렬처리 작업들을 오직 단 하나의 스택으로 실행할 수 있도록 효율성을 극대화하였습니다. 
+별도로 직렬과 병렬 처리를 위해 새로운 스택을 생성하지 않아도 됩니다. 하지만 asyncstack은 매우 단순한 구조로 되어있습니다. 
+
 AsyncStack은 async/await와 비슷한 형태로 함수를 정의하고 사용할 수 있도록 하는데 중점을 둔 프로젝트입니다.
 흔히 사용되는 async.js의 경우, 콜백을 많이 줄여주기는 하지만 사용함에 있어서 익명함수를 많이 사용하게 되며
 각 함수에 전달할 매개변수의 사용의 설정이 제한적인 단점이 있습니다. 그래서 async를 감싸는 함수의 스코프 내에서
